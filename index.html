@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羅詠倫 | 機器視覺與 AOI 自動化光學檢測</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <nav class="navbar">
+        <div class="logo">Vision<span class="dot">.</span>AOI</div>
+        <ul class="nav-links">
+            <li><a href="#hero">首頁</a></li>
+            <li><a href="#about">關於我</a></li>
+            <li><a href="#skills">專業技能</a></li>
+            <li><a href="#projects">專案作品</a></li>
+            <li><a href="#contact">聯絡</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero reveal">
+        <div class="hero-content">
+            <div class="badge">歡迎來到我的視覺檢測作品集</div>
+            <h1 class="glitch-text">你好，我是 <span class="highlight text-gradient">羅詠倫</span></h1>
+            <p class="subtitle">專注於<span class="text-gradient" style="font-weight:600;">機器視覺 (AOI)</span>、控制系統整合與深度學習演算法的工程學生。</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary">
+                    <span>查看檢測專案</span> <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn secondary">聯絡我</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="tech-graphic">
+                <div class="lens">
+                    <div class="lens-reflection"></div>
+                </div>
+                <div class="scan-line"></div>
+                <div class="pcb-traces">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about reveal">
+        <h2 class="section-title">關於我 <span class="line"></span></h2>
+        <div class="about-container">
+            <div class="about-text">
+                <p>我是一名具備完整機器視覺系統開發能力的工程學生。在控制系統的訓練基礎上，我深入研究自動化光學檢測 (AOI) 的核心技術，涵蓋從前端光學硬體評估到後端 AI 演算法的系統整合。</p>
+                <p>我熟悉如何針對不同待測物特徵選擇合適的相機 (Global Shutter)、遠心鏡頭與照明設計（明視野、暗視野）。在軟體端，精通運用空間/頻率濾波、形態學運算等傳統影像處理技術，並能結合 YOLOv8 深度學習模型，針對台灣電子製造業常見的 PCB 瑕疵開發高準確度的自動化檢測方案。</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-box">
+                    <h3>AOI</h3>
+                    <p>光學系統設計</p>
+                </div>
+                <div class="stat-box">
+                    <h3>AI</h3>
+                    <p>深度學習檢測</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills reveal">
+        <h2 class="section-title">專業技能 <span class="line"></span></h2>
+        <div class="skills-container" id="skills-container"></div>
+    </section>
+
+    <section id="projects" class="projects reveal">
+        <h2 class="section-title">專案作品 <span class="line"></span></h2>
+        <div class="projects-container" id="projects-container"></div>
+    </section>
+
+    <section id="contact" class="contact reveal">
+        <div class="contact-box">
+            <h2>尋求視覺檢測的解決方案？</h2>
+            <p>無論是光學取像設計、傳統影像處理演算法實作，還是深度學習模型訓練，隨時歡迎聯絡交流。</p>
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com" class="social-btn"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://github.com/s411287051" target="_blank" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 羅詠倫. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
