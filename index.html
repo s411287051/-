@@ -7,7 +7,9 @@
     <title>羅詠倫 | 機器視覺與 AOI 自動化光學檢測</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -23,6 +25,7 @@
         <div class="logo">Vision<span class="dot">.</span>AOI</div>
         <ul class="nav-links">
             <li><a href="#hero">首頁</a></li>
+            <li><a href="#toc">目錄</a></li>
             <li><a href="#about">關於我</a></li>
             <li><a href="#skills">專業技能</a></li>
             <li><a href="#projects">專案作品</a></li>
@@ -35,57 +38,375 @@
 
     <section id="hero" class="hero reveal">
         <div class="hero-content">
-            <div class="badge">歡迎來到我的視覺檢測作品集</div>
-            <h1 class="glitch-text">你好，我是 <span class="highlight text-gradient">羅詠倫</span></h1>
-            <p class="subtitle">專注於<span class="text-gradient" style="font-weight:600;">機器視覺 (AOI)</span>、控制系統整合與深度學習演算法的工程學生。</p>
+            <div class="badge">機器視覺與深度學習專題</div>
+            <h1 class="glitch-text"><span class="highlight text-gradient">羅詠倫</span></h1>
+            <p class="subtitle">專注於<span class="text-gradient" style="font-weight:600;">機器視覺
+                    (AOI)</span>、光學硬體取像系統評估與深度學習演算法，涵蓋從前端光學硬體到後端 AI 模型設計的完整系統整合。</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn primary">
-                    <span>查看檢測專案</span> <i class="fas fa-arrow-right"></i>
+                    <span>查看期末專案</span> <i class="fas fa-arrow-right"></i>
                 </a>
-                <a href="#contact" class="btn secondary">聯絡我</a>
+                <a href="#knowledge" class="btn secondary">所學知識筆記</a>
             </div>
         </div>
         <div class="hero-image">
-            <div class="tech-graphic">
-                <div class="lens">
-                    <div class="lens-reflection"></div>
-                </div>
+            <div class="tech-graphic"
+                style="background: url('images/pcb_defect.png') center/cover; border-radius: 20px; box-shadow: 0 0 30px rgba(108, 92, 231, 0.5);">
                 <div class="scan-line"></div>
-                <div class="pcb-traces">
-                    <span></span><span></span><span></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="toc" class="toc reveal">
+        <div class="toc-card">
+            <h2 class="section-title">快速目錄 <span class="line"></span></h2>
+            <p style="color:var(--text-muted);max-width:820px;margin:0 auto;font-size:1rem;line-height:1.8;">點擊下方主題，快速跳到你想閱讀的知識卡片。若卡片內容較長，可先瀏覽目錄找到重點。</p>
+            <div class="toc-list">
+                <a href="#topic-0">0. 機器視覺概論與 AOI 定義</a>
+                <a href="#topic-1">1. 光源與照明設計</a>
+                <a href="#topic-2">2. 相機與鏡頭搭配原理</a>
+                <a href="#topic-3">3. 相機規格詳解與取像參數選用</a>
+                <a href="#topic-4">4. 彩色成像與影像品質</a>
+                <a href="#topic-5">5. 數位影像空間域處理</a>
+                <a href="#topic-6">6. 影像分割與二值化</a>
+                <a href="#topic-7">7. 頻率域濾波</a>
+                <a href="#topic-8">8. 形態學影像處理</a>
+                <a href="#topic-9">9. 遠心鏡頭與線掃描系統</a>
+                <a href="#topic-10">10. 取像參數實務案例</a>
+                <a href="#topic-11">11. 進階形態學運算</a>
+                <a href="#topic-12">12. 影像特徵表示與描述</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="knowledge" class="skills reveal">
+        <h2 class="section-title">機器視覺學習筆記 <span class="line"></span></h2>
+        <p style="text-align:center;color:var(--text-muted);max-width:860px;margin:0 auto 3rem auto;line-height:1.8;">
+            整合課程簡報、影片筆記，涵蓋機器視覺完整學習路徑：從 AOI 概論、光學取像系統設計、影像處理基礎，到深度學習應用。</p>
+
+        <div class="knowledge-grid">
+
+            <div class="knowledge-card">
+                <div class="knowledge-content">
+                    <h3 id="topic-0">0. 機器視覺概論與 AOI 定義</h3>
+                    <p>機器視覺 (Machine Vision) 模仿人類視覺，以「非接觸方式」自動擷取影像並分析，從中抽取資料以控制製程或動作。自動化光學檢測 (AOI)
+                        是其最重要的工業應用，解決人工檢測速度慢、可靠度低、穩定性差的問題，達成全自動化品質確認。</p>
+                    <ul>
+                        <li><strong>機器視覺六大功能：</strong>定位 (Positioning)、識別 (Recognition)、辨識 (Identification，如 Barcode/QR
+                            Code/車牌)、瑕疵檢測 (Defect Detection)、驗證 (Verification)、量測 (Measurement，如線寬、圓心半徑)</li>
+                        <li><strong>人類 vs 機器視覺：</strong>人類視覺適合複雜判斷性工作；機器視覺適合高速、重複性、須穩定度的工作（例如 1200 片/分鐘的貼標機監控）</li>
+                        <li><strong>AOI 所需核心技術魚骨圖：</strong>光學機構設計、機台設計、運動控制技術、系統整合、影像前處理、影像後處理、尺寸量測、瑕疵檢測</li>
+                        <li><strong>業界常用視覺工具：</strong>Blob Analysis（特徵提取）、Pattern Matching（圖樣匹配）、Edge
+                            Locator（邊緣定位）、Circle/Ellipse/Rectangle Finder、OCR 文字識別、CNN 卷積神經網路分類</li>
+                        <li><strong>瑕疵檢測挑戰：</strong>瑕疵出現位置不定、形狀未知；門檻太鬆 → 漏檢，太嚴 → 假警報。需在兩者間取得平衡</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="knowledge-card">
+                <div class="knowledge-img"><img src="images/aoi_lighting.png" alt="照明設計示意"></div>
+                <div class="knowledge-content">
+                    <h3 id="topic-1">1. 光源與照明設計</h3>
+                    <p>照明是 AOI 系統最關鍵的一環。良好的打光能直接凸顯瑕疵、壓抑背景干擾，大幅簡化後端影像處理。原則：與其在演算法下功夫，不如先把照明設計好。</p>
+                    <ul>
+                        <li><strong>鎢絲燈 (3000-3400K)：</strong>亮、低電壓操作；但熱量大（效率僅 5%）、壽命短、無法閃頻控制</li>
+                        <li><strong>氙氣燈 (5500-12000K)：</strong>可閃頻高達 200次/秒、閃光時間短至 1-20μs、亮度極高；供電複雜且昂貴</li>
+                        <li><strong>螢光燈 (3000-6000K)：</strong>便宜、照射面積大；壽命短、無法閃頻、光譜分布不均</li>
+                        <li><strong>LED（AOI 主流光源）：</strong>低熱低耗電、壽命長（2-3 萬小時，亮度降至 70% 才算到壽命）、可閃頻控制、亮度易調整、可組成任意形狀。白光有兩種：①
+                            藍光+黃色磷光劑；② RGB 三色混合</li>
+                        <li><strong>常見 LED 燈型：</strong>無影環光（防陰影）、穹頂型（包覆式）、條型光、同軸光、高角度環光、背光板</li>
+                        <li><strong>連續照明 vs 閃頻照明：</strong>工業上物件到達才瞬間打光拍照，節能且延長 LED 壽命</li>
+                    </ul>
+                    <p><strong>三種照明方式的選擇：</strong></p>
+                    <ul>
+                        <li><strong>明視野 (Bright Field)：</strong>相機架於鏡面反射路徑上，呈現「反射率」差異。金屬=亮白；灰塵/瑕疵無反射=暗黑。適合表面反射差異明顯的待測物
+                        </li>
+                        <li><strong>暗視野 (Dark Field)：</strong>相機偏離反射路徑，接收「散射光」。刮痕、灰塵、玻璃邊緣因散射而發亮，背景全暗。特別適合偵測表面微小缺陷</li>
+                        <li><strong>穿透光 (Backlight)：</strong>光源從待測物後方打入，呈現「穿透率」差異。不透明區域=黑色輪廓。適合外觀輪廓量測</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="knowledge-card">
+                <div class="knowledge-img"><img src="images/deep_learning.png" alt="相機鏡頭示意"></div>
+                <div class="knowledge-content">
+                    <h3 id="topic-2">2. 相機與鏡頭搭配原理</h3>
+                    <p>機器視覺取像系統等同人眼：光源打光 → 鏡頭聚焦 → 感光元件成像 → 電腦處理。正確選型必須掌握以下光學參數。</p>
+                    <ul>
+                        <li><strong>成像公式：</strong><code>1/f = 1/u + 1/v</code>（f=焦距、u=物距/WD、v=像距）。物體靠近時像距增大、影像放大</li>
+                        <li><strong>放大倍率 α：</strong><code>α = v/u = d/D</code>（d=像面尺寸，D=物面尺寸）。相同倍率下，焦距越長工作距離 WD
+                            越長，可避開機台機構干涉</li>
+                        <li><strong>Image Circle 與 Sensor Size：</strong>鏡頭成像為圓形，感測器（矩形）的對角線長必須 ≤ Image Circle
+                            直徑，否則畫面邊緣出現暗角。注意：「1 inch Sensor」對角線≠25.4mm，須用畢氏定理計算（實際約 15.8mm）</li>
+                        <li><strong>FOV 視野幅：</strong><code>FOV = Sensor Size / α</code>。FOV 不足 → 降低倍率；像素解析度不足 →
+                            提高倍率；兩者都不足 → 同時增大 Sensor Size 與倍率</li>
+                        <li><strong>像素解析度 (分辨率)：</strong><code>分辨率 = Pixel Size / α</code>。例：Pixel=3.45μm、倍率=0.5× →
+                            分辨率=6.9μm（代表可辨識物面上 6.9μm 的細節）</li>
+                        <li><strong>近攝接寫環 (Extension Tube)：</strong>接在相機與鏡頭之間，縮短工作距離達到微距效果，通常 3 環共 8 種組合，無需換鏡頭</li>
+                        <li><strong>鏡頭接口 C/CS Mount：</strong>C Mount 法蘭距 17.526mm；CS Mount 12.5mm。CS Mount 相機加 5mm 延伸環可用
+                            C Mount 鏡頭；C Mount 相機不能接 CS Mount 鏡頭</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="knowledge-card">
+                <div class="knowledge-content">
+                    <h3 id="topic-3">3. 相機規格詳解與取像參數選用</h3>
+                    <ul>
+                        <li><strong>Sensor 尺寸：</strong>從 1/4 inch 到 35mm Full Frame，尺寸越大 FOV 越大。Sensor Size = 解析度 ×
+                            Pixel Size</li>
+                        <li><strong>Rolling Shutter：</strong>逐行曝光，物體移動中拍攝產生「果凍效應」（形變）；適合靜態場合</li>
+                        <li><strong>Global Shutter：</strong>全域同時曝光，可清晰捕捉高速移動/旋轉物件；Pixel 較大感光佳，但高解析度難製作、成本高</li>
+                        <li><strong>傳輸介面：</strong>GigE（100m/1Gbps，最普及）、USB3.0（10m/5Gbps）、Camera
+                            Link（6m/6.8Gbps）、CoaXPress（68m/25Gbps，高端應用）</li>
+                    </ul>
+                    <p><strong>取像三大關鍵參數：</strong></p>
+                    <ul>
+                        <li><strong>光圈 F#：</strong><code>F# = 焦距 / 光圈直徑</code>，數字越小光圈越大 → 景深越淺、進光量越多。建議工業用選 F4~F8
+                            最銳利；拍平面樣品可開大光圈（景深無需求）；需不同深度都清楚則縮小光圈</li>
+                        <li><strong>曝光時間：</strong>越長越亮。物體有相對運動必須縮短曝光，否則模糊無法救回。靜態場合可拉長</li>
+                        <li><strong>增益 Gain (ISO)：</strong>越大越亮，但雜訊也越多。原則：優先調曝光時間，再用 Gain 微調亮度</li>
+                    </ul>
+                    <p><strong>拍攝品質黃金法則：</strong></p>
+                    <ul>
+                        <li>① 對焦必須清楚——失焦影像完全無法救回</li>
+                        <li>② 絕對不能過曝——過曝的高光細節消失無法救回</li>
+                        <li>③ 曝光不足可透過調 Gain 或後製調回</li>
+                        <li>④ 優先順序：清晰對焦 > 不過曝 > 亮度適中</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="knowledge-card">
+                <div class="knowledge-content">
+                    <h3 id="topic-4">4. 彩色成像與影像品質</h3>
+                    <ul>
+                        <li><strong>Bayer Pattern：</strong>在感測元件貼 RGGB
+                            濾光片，缺少的兩色從鄰近像素插值補齊。成本最低但解析度下降。切記：不可用彩色相機拍後轉灰階，應直接購買灰階相機</li>
+                        <li><strong>3CCD：</strong>稜鏡分光，RGB 各由獨立感測元件接收；畫質最佳、成本最高</li>
+                        <li><strong>Pixel Shift：</strong>感測元件微移三次分別拍 RGB；適合靜態場合，需精密壓電馬達</li>
+                        <li><strong>Foveon 多層堆疊：</strong>RGB 感光層垂直疊合，利用波長穿透深度不同同時感應；低光感光能力弱（代表品牌 SIGMA）</li>
+                        <li><strong>SNR 訊號雜訊比：</strong>衡量畫面純淨度，&gt;39dB 為佳。瑕疵只有單一 Pixel 大小時 SNR 極重要</li>
+                        <li><strong>Dynamic Range 動態範圍：</strong>同時捕捉極亮與極暗的能力，&gt;58dB 為佳</li>
+                        <li><strong>影像品質優化：</strong>白平衡校正 → 亮度均勻校正 → 對比擴張（降 Offset 再提 Gain）</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="knowledge-card">
+                <div class="knowledge-content">
+                    <h3 id="topic-5">5. 數位影像空間域處理</h3>
+                    <p>空間濾波以遮罩 (Kernel) 對每個像素及其鄰域進行加權運算，輸入 f(x,y) 輸出 g(x,y)。</p>
+                    <ul>
+                        <li><strong>強度轉換：</strong>二值化（門檻化）、負片 <code>s=255-r</code>、對數轉換（壓縮高動態範圍）、Gamma/Power Law（螢幕校正）
+                        </li>
+                        <li><strong>直方圖等化：</strong>統計灰階分布，透過累積分布函數重新映射，使對比均勻提升</li>
+                        <li><strong>均值/高斯濾波（低通/平滑）：</strong>消除高頻雜訊。高斯濾波中心權重較大，影像較不模糊</li>
+                        <li><strong>中值濾波：</strong>取鄰域排序後的中間值，專門消除椒鹽雜訊 (Pepper-Salt Noise)，且不模糊邊緣</li>
+                        <li><strong>Sobel/Prewitt（一階微分）：</strong>計算水平/垂直梯度，偵測邊緣；有 0°/90°/45°/-45° 方向版本</li>
+                        <li><strong>Laplacian（二階微分）：</strong>等向性邊緣增強，中心為 -4 或 -8，常用於銳化影像與凸顯孔洞特徵</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="knowledge-card">
+                <div class="knowledge-content">
+                    <h3 id="topic-6">6. 影像分割與二值化</h3>
+                    <p>影像分割將影像細分成感興趣的區域，是 AOI 中「找出目標」的關鍵步驟。</p>
+                    <ul>
+                        <li><strong>全域門檻化：</strong>大於門檻 T 為前景(白)，小於則為背景(黑)。受雜訊與光照不均影響大</li>
+                        <li><strong>反覆式整體門檻：</strong>先估初始值，分兩群計算平均 m1/m2，取新門檻 T=(m1+m2)/2，反覆直到收斂</li>
+                        <li><strong>Otsu 最佳化門檻：</strong>自動找使「類別間變異數 σB²」最大的門檻值 k*，是目前最常用的自動二值化方法，無需人工設定</li>
+                        <li><strong>邊緣模型：</strong>步階邊緣（理想）、斜坡邊緣（實際，斜率與銳利度反比）、屋頂邊緣（線模型）</li>
+                        <li><strong>區域成長法：</strong>從種子點出發，依相似性準則（灰階、紋理、標準差等）向外擴展；適合光照不均場合</li>
+                        <li><strong>區域分裂與合併（四分樹）：</strong>不滿足述詞則分裂成四象限，相鄰且滿足則合併；透過最小分割區域參數控制精細度</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="knowledge-card">
+                <div class="knowledge-content">
+                    <h3 id="topic-7">7. 頻率域濾波</h3>
+                    <ul>
+                        <li><strong>影像頻率：</strong>快速變化區域（條紋、邊緣）=高頻；平滑區域（背景）=低頻</li>
+                        <li><strong>二維傅立葉轉換：</strong>f(x,y) → F(u,v)；利用平移特性可將低頻移至頻譜中心，方便設計濾波器</li>
+                        <li><strong>頻域濾波流程：</strong>f(x,y) → 前處理 → FFT → 乘上 H(u,v) → IFFT → 後處理 → g(x,y)</li>
+                        <li><strong>低通濾波器（平滑）：</strong>通過低頻、衰減高頻。三種設計：理想低通（有振鈴）、Butterworth（2階以下無振鈴）、高斯（永不振鈴）</li>
+                        <li><strong>高通濾波器（銳化）：</strong>通過高頻、衰減低頻，增強邊緣細節。同樣有理想/Butterworth/高斯版本</li>
+                        <li><strong>振鈴現象：</strong>使用理想濾波器或截斷頻率過低時出現邊緣震盪，改用 Butterworth 2階或高斯可消除</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="knowledge-card">
+                <div class="knowledge-content">
+                    <h3 id="topic-8">8. 形態學影像處理</h3>
+                    <p>以結構元素 (Structuring Element) 與集合理論為基礎，對二值影像進行形狀萃取、雜訊消除、特徵提取等操作，是 AOI 影像後處理的重要工具。</p>
+                    <ul>
+                        <li><strong>侵蝕 Erosion：</strong>結構元素完全包含於影像集合才保留中心點。效果：縮小前景、消除小雜訊、分離黏連物件</li>
+                        <li><strong>膨脹 Dilation：</strong>結構元素與影像任意交集即保留。效果：擴大前景、填補破碎、橋接斷線</li>
+                        <li><strong>斷開 Opening（先侵蝕再膨脹）：</strong>去除凸出背景的尖銳部分與小雜訊，整體形狀不變（等同讓結構元素在物件內滾動）</li>
+                        <li><strong>閉合 Closing（先膨脹再侵蝕）：</strong>填補背景侵入物件的尖銳凹陷與孔洞，輪廓更平滑（等同讓結構元素在物件外滾動）</li>
+                        <li><strong>交離運算 Hit-or-Miss：</strong>同時對影像及其補集侵蝕，精確定位特定形狀，可用於字元辨識、模板匹配（找「2」、找「1」等）</li>
+                        <li><strong>輪廓萃取 Boundary Extraction：</strong>β(A) = A − (A 被 B 侵蝕)，精確取出影像邊界線</li>
+                        <li><strong>區域填補 Hole Filling：</strong>從孔洞內部種子點出發，反覆膨脹並與前景補集取交集，直至收斂，填滿封閉孔洞</li>
+                        <li><strong>連通元件萃取：</strong>類似填補，但交集對象為原影像，用於擷取特定連通結構（如 X 光骨骼分離）</li>
+                        <li><strong>細線化 Thinning 與骨幹萃取 Skeleton：</strong>保留物件拓樸結構，用八個方向結構元素循序細化，常用於指紋、字元識別</li>
+                        <li><strong>剪除 Pruning：</strong>細線化後清除多餘寄生枝，結合細線化 + 交離運算 + 膨脹交集完成</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="knowledge-card">
+                <div class="knowledge-content">
+                    <h3 id="topic-9">9. 遠心鏡頭與線掃描系統</h3>
+                    <p>在高精度 AOI 與尺寸量測中，單靠一般鏡頭往往會受到透視誤差影響，因此常需要導入遠心鏡頭或線掃描系統，以提升成像穩定性與量測準確度。</p>
+                    <ul>
+                        <li><strong>一般鏡頭：</strong>屬於非等視角成像，物體離鏡頭遠近不同時，外觀尺寸可能改變，容易造成量測誤差。</li>
+                        <li><strong>遠心鏡頭 (Telecentric Lens)：</strong>具備等視角特性，橫向量測較不受深度影響，特別適合精密尺寸量測與孔位檢測。</li>
+                        <li><strong>優點：</strong>幾何變形小、透視誤差低、量測結果穩定，適合高精度 AOI 應用。</li>
+                        <li><strong>缺點：</strong>體積較大、價格較高，通常用於高附加價值的檢測任務。</li>
+                        <li><strong>線掃描系統 (Line Scan)：</strong>當檢測目標視野幅過大，或物體在輸送帶上持續移動時，常以線掃描相機逐行成像，最終重建完整影像。</li>
+                        <li><strong>應用情境：</strong>PCB 大面積表面檢測、卷材、玻璃、顯示面板與高速輸送檢測等。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="knowledge-card">
+                <div class="knowledge-content">
+                    <h3 id="topic-10">10. 取像參數實務案例</h3>
+                    <p>相機的光圈、曝光時間與增益雖然是基本參數，但在不同檢測場景下，實際調整策略並不相同。工業取像的核心原則是：先確保對焦清楚，再避免過曝，最後才追求亮度最佳化。</p>
+                    <ul>
+                        <li><strong>平面樣品：</strong>若待測物幾乎位於同一平面，可使用較大光圈以提高進光量，但工業上通常建議 F4~F8 區間，以兼顧成像銳利度與亮度。</li>
+                        <li><strong>有景深的樣品：</strong>若物體存在高度差，必須縮小光圈（提高 F#）以增加景深，讓不同深度皆維持清楚。</li>
+                        <li><strong>動態樣品：</strong>在輸送帶或旋轉情境中，需優先縮短曝光時間避免運動模糊；若亮度不足，再透過 Gain 作最後補償。</li>
+                        <li><strong>曝光原則：</strong>曝光不足通常仍可透過後處理補強，但過曝會造成高光細節永久遺失。</li>
+                        <li><strong>對焦原則：</strong>失焦與晃動造成的模糊幾乎無法後製修復，因此清楚對焦永遠是最高優先級。</li>
+                        <li><strong>增益原則：</strong>Gain 越大畫面越亮，但也會同步放大雜訊，因此在可行情況下應盡量保持較低增益。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="knowledge-card">
+                <div class="knowledge-content">
+                    <h3 id="topic-11">11. 進階形態學運算</h3>
+                    <p>除了侵蝕、膨脹、開運算與閉運算外，形態學還能進一步完成輪廓萃取、孔洞填補、連通區域擷取與骨幹化，對 AOI 的瑕疵檢測與特徵整理非常重要。</p>
+                    <ul>
+                        <li><strong>Hit-or-Miss：</strong>同時考慮前景與背景形狀的匹配方式，可用來偵測特定幾何結構或字元樣式。</li>
+                        <li><strong>Boundary Extraction：</strong>利用原圖減去侵蝕後結果，提取物體邊界，便於輪廓分析。</li>
+                        <li><strong>Hole Filling：</strong>由種子點出發進行膨脹與交集運算，可將封閉區域內的孔洞填滿。</li>
+                        <li><strong>Connected Components：</strong>擷取特定連通元件，便於區分不同物件區域。</li>
+                        <li><strong>Convex Hull：</strong>將物體外形包成最小凸形，用於形狀分析與輪廓簡化。</li>
+                        <li><strong>Thinning / Skeleton：</strong>將物體細線化並保留主幹結構，常用於字元辨識、路徑分析與指紋特徵處理。</li>
+                        <li><strong>Pruning：</strong>在細線化後剪除不必要的小分枝，讓骨架更乾淨、更適合後續分析。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="knowledge-card">
+                <div class="knowledge-content">
+                    <h3 id="topic-12">12. 影像特徵表示與描述</h3>
+                    <p>在完成分割與形態學處理後，下一步通常是將物件轉換成可供分析與辨識的特徵表示。好的特徵應具有穩定性，並盡可能不受位置、方向與尺寸變化影響。</p>
+                    <ul>
+                        <li><strong>Boundary Representation：</strong>以物體輪廓作為主要表示方式，適合分析外形變化。</li>
+                        <li><strong>Skeleton Representation：</strong>以骨幹結構表達物體主要幾何拓樸，適合保留形狀主體資訊。</li>
+                        <li><strong>Boundary Description：</strong>針對輪廓進一步描述其曲率、方向、邊界長度等性質。</li>
+                        <li><strong>Region Description：</strong>以區域面積、重心、方向、矩等特徵描述整體形狀。</li>
+                        <li><strong>特徵設計重點：</strong>應具備區分能力、穩定性與不變性，才能支援後續分類、量測或辨識任務。</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about reveal">
-        <h2 class="section-title">關於我 <span class="line"></span></h2>
-        <div class="about-container">
-            <div class="about-text">
-                <p>我是一名具備完整機器視覺系統開發能力的工程學生。在控制系統的訓練基礎上，我深入研究自動化光學檢測 (AOI) 的核心技術，涵蓋從前端光學硬體評估到後端 AI 演算法的系統整合。</p>
-                <p>我熟悉如何針對不同待測物特徵選擇合適的相機 (Global Shutter)、遠心鏡頭與照明設計（明視野、暗視野）。在軟體端，精通運用空間/頻率濾波、形態學運算等傳統影像處理技術，並能結合 YOLOv8 深度學習模型，針對台灣電子製造業常見的 PCB 瑕疵開發高準確度的自動化檢測方案。</p>
-            </div>
-            <div class="about-stats">
-                <div class="stat-box">
-                    <h3>AOI</h3>
-                    <p>光學系統設計</p>
-                </div>
-                <div class="stat-box">
-                    <h3>AI</h3>
-                    <p>深度學習檢測</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="skills" class="skills reveal">
-        <h2 class="section-title">專業技能 <span class="line"></span></h2>
-        <div class="skills-container" id="skills-container"></div>
-    </section>
 
     <section id="projects" class="projects reveal">
-        <h2 class="section-title">專案作品 <span class="line"></span></h2>
-        <div class="projects-container" id="projects-container"></div>
+        <h2 class="section-title">期末專案 <span class="line"></span></h2>
+
+        <div class="project-detail">
+            <div class="project-header">
+                <h2>基於機器視覺與深度學習之 PCB 缺孔 (Missing Hole) 瑕疵檢測系統</h2>
+                <div class="tech-tags">
+                    <span>YOLOv8</span>
+                    <span>OpenCV</span>
+                    <span>CLAHE</span>
+                    <span>遠心鏡頭 (Telecentric Lens)</span>
+                </div>
+            </div>
+
+            <div class="project-body">
+                <div class="project-section">
+                    <h3><i class="fas fa-bullseye"></i> 專案動機與背景</h3>
+                    <p>印刷電路板 (Printed Circuit Board, PCB) 是所有電子產品的基石。在 PCB 設計與生產中，「缺孔 (Missing
+                        Hole)」屬於致命性的瑕疵。缺孔會導致板上下層電路無法導通電子訊號，若在出廠前未被發現，將造成最終組裝產品失效。</p>
+                    <p>傳統的自動化光學檢測 (AOI)
+                        多依賴人工或是基於規則的影像處理演算法，容易受到影像反光、雜訊等因素影響而產生誤判或漏檢。本專案結合了前端機器視覺的硬體打光技巧與後端深度學習的物件偵測模型，建立一套自動化缺孔檢測系統，以提升檢測的準確度與強健性。
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h3><i class="fas fa-camera"></i> 硬體取像與光學特性分析</h3>
+                    <p>在進行影像檢測前，必須先理解待測物的物理特性，並設計合適的取像系統：</p>
+                    <ul>
+                        <li><strong>材質與反光特性：</strong>PCB 主要由綠漆(阻焊層)與裸露的銅線路組成。銅具有金屬光澤，在強烈與方向性光源(Specular
+                            Reflection)照射下，極易產生反光與過曝，這會掩蓋缺孔特徵，造成演算法誤判。</li>
+                        <li><strong>光學鏡頭選型：</strong>一般常規鏡頭會產生透視誤差。如果在固定視角下，邊緣的缺孔會因為視角(尤其是厚板)而被遮蔽或變形。因此在實際的 AOI
+                            機台中，此類檢測通常需要搭配「遠心鏡頭 (Telecentric Lens)」來取像，確保視野內的缺孔皆維持正視角的幾何特徵。</li>
+                        <li><strong>缺孔的影像特徵：</strong>正常情況下，有鑽孔的地方(孔洞內)在打光下會呈現較暗的陰影，無反光的黑色圓形。然而，當發生「缺孔」瑕疵時，該位置會呈現與周圍基板 (如
+                            FR-4 玻纖) 或銅箔相似的反射光，在灰階影像上會與正常鑽孔產生極大的對比差異。</li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <h3><i class="fas fa-database"></i> 數據集與檢測目標</h3>
+                    <p>本系統採用開源的 PCB 瑕疵數據集 (如 Kaggle 的 PCB Defect Dataset) 進行模型訓練與驗證。</p>
+                    <ul>
+                        <li><strong>檢測核心目標：</strong>缺孔 (Missing Hole)。</li>
+                        <li><strong>標註格式：</strong>數據集內含多種瑕疵影像，並提供對應的標註檔案 (XML/TXT)，明確標註缺孔瑕疵的邊界框 (Bounding Box) 座標。</li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <h3><i class="fas fa-cogs"></i> 核心演算法：影像前處理與深度學習模型</h3>
+                    <p>本專案的核心由「影像前處理」與「深度學習模型」兩大模組組成：</p>
+
+                    <h4>1. 影像前處理技術 (Image Preprocessing)</h4>
+                    <p>在將影像輸入深度學習模型前，先進行以下數位影像處理以凸顯瑕疵特徵：</p>
+                    <ul>
+                        <li><strong>灰階轉換 (Grayscale Conversion)：</strong>缺孔瑕疵主要表現在形狀與亮度對比上，而非色彩差異。將 RGB
+                            影像轉換為單通道灰階影像，可大幅降低運算複雜度並去除不必要的色彩干擾。</li>
+                        <li><strong>適應性直方圖等化 (CLAHE)：</strong>為克服 PCB 反光與光源不均，導入 CLAHE
+                            技術，將影像劃分小區塊進行局部對比度增強，有效提升整體影像亮度與缺孔邊緣的對比度。</li>
+                        <li><strong>雜訊濾除 (Noise Filtering)：</strong>應用高斯模糊 (Gaussian Blur) 或中值濾波 (Median Filter)
+                            平滑影像，消除高頻雜訊。</li>
+                        <li><strong>邊緣增強 (Edge Enhancement)：</strong>針對模糊的邊緣，利用拉普拉斯算子 (Laplacian) 或 Sobel
+                            算子進行邊緣強化，使缺孔特徵更為鮮明。</li>
+                    </ul>
+
+                    <h4>2. 資料擴增 (Data Augmentation)</h4>
+                    <p>為提升模型的泛化能力 (Generalization)，採用了包含平移、縮放、旋轉及翻轉的空間轉換，以及改變亮度、對比、增加雜訊等像素級的轉換，確保模型能適應工業現場的各種變異。</p>
+
+                    <h4>3. 深度學習物件偵測 (YOLOv8 架構)</h4>
+                    <p>選用 YOLO (You Only Look Once) 作為核心偵測器。YOLO 是端到端 (End-to-End) 的單階段模型，能同時預測邊界框、類別與信心分數。本系統基於 YOLOv8
+                        進行架構設計：</p>
+                    <ul>
+                        <li><strong>骨幹網路 (Backbone)：</strong>使用深度卷積網路 (如 CSPDarknet) 提取特徵，從淺層的邊緣特徵到深層的語意特徵逐步萃取。</li>
+                        <li><strong>頸部特徵融合 (Neck)：</strong>引入 PANet 與 FPN 架構，將深層語意與淺層空間特徵進行多尺度融合。由於 PCB
+                            上的瑕疵大小不一，此設計能大幅提升不同尺度「缺孔」的辨識能力。</li>
+                        <li><strong>解耦偵測頭 (Decoupled Head)：</strong>YOLOv8 採用解耦偵測頭，將邊界框預測與分類任務分開處理，提高收斂速度與精準度，滿足工業現場即時檢測
+                            (Real-time Detection) 的要求。</li>
+                        <li><strong>損失函數優化 (Loss Function)：</strong>針對「缺孔」瑕疵漏檢代價極高的特性，特別調整損失函數權重以優化「召回率 (Recall)」。</li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <h3><i class="fas fa-chart-line"></i> 系統驗證與結果分析</h3>
+                    <p>將測試集影像輸入訓練好的 YOLOv8 模型進行推理。透過比對預測結果與真實標註，重點評估系統的「召回率 (Recall)」，確保系統達到極低的漏檢率，並同時參考平均精度均值 (mAP)
+                        評估整體檢測穩定性。</p>
+                    <p><strong>結論：</strong>本專案成功開發並整合了從光學特性分析、影像前處理到深度學習模型的 PCB 缺孔自動化檢測系統。藉由適當的影像增強技術與強大的 YOLO
+                        模型，大幅降低了工業環境中高反光帶來的誤判率，證明了機器視覺在電子製造領域的極高應用價值。</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="contact" class="contact reveal">
@@ -94,7 +415,8 @@
             <p>無論是光學取像設計、傳統影像處理演算法實作，還是深度學習模型訓練，隨時歡迎聯絡交流。</p>
             <div class="contact-links">
                 <a href="mailto:your.email@example.com" class="social-btn"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://github.com/s411287051" target="_blank" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://github.com/s411287051" target="_blank" class="social-btn"><i class="fab fa-github"></i>
+                    GitHub</a>
             </div>
         </div>
     </section>
